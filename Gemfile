@@ -2,8 +2,16 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.1'
 
-group :development do
-  gem 'sqlite3', '1.3.5'
+#group :development do
+#  gem 'sqlite3', '1.3.5'
+#end
+
+#gem 'sqlite3-ruby', :require => 'sqlite3', :group => 'development'
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production, :staging do
+  gem 'pg'
 end
 
 
